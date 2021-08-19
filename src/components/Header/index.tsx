@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import cartSvg from '../../assets/icons/cartSvg.svg';
 import '../../scss/header.scss';
@@ -14,12 +13,11 @@ function Header() {
                     <Link to='/'><div className="header__title">Test_Optimax</div></Link>
                     <div className="header__cart">
                         <Link to="/cart">
-                            <img className="header__cart-img" src={cartSvg}/>
+                            <img  className="header__cart-img" data-testid="cartSvg" src={cartSvg}/>
                             <span className="header__cart-badge">{totalCount}</span>
                         </Link>
                     </div>
                 </div>
-                
             </div>
         </header>
     )
