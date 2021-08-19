@@ -8,6 +8,7 @@ export interface ProductInt {
     id:number,
     name:string,
     price:number,
+    image:string
 }
 
 

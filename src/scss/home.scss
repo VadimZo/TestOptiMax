@@ -12,12 +12,17 @@
     width: 100%;
     margin-bottom: 30px;
 }
+.home__inner-img{
+  object-fit: contain;
+  width: 100%;
+  min-height: 190px;
+}
 .home__item-name{
     text-align: center;
 }
 .home__item-price{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .home__item-quantity{
     display:flex;

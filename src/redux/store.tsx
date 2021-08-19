@@ -1,6 +1,6 @@
 import { createStore, compose } from 'redux';
 import {CartState} from './state/CartState';
-import rootReducer from './reducers';
+import {rootReducer} from './reducers';
 
 declare global {
     interface Window {

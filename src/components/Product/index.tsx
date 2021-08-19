@@ -2,7 +2,7 @@
 import React from 'react'
 import { useDispatch,useSelector } from 'react-redux';
 import { ProductInt } from '../../pages/Home';
-import { removeCartItem,plusCartItem,minusCartItem } from '../../redux/actions/cart';
+import { plusCartItem,minusCartItem } from '../../redux/actions/cart';
 import { RootState } from '../../redux/store';
 
 let showArray=[];
@@ -12,12 +12,12 @@ interface ProductProps extends ProductInt{
   }
   
 
-function Product({onClickAdd,id,name,price}:ProductProps) {
+function Product({onClickAdd,id,name,price,image}:ProductProps) {
     const dispatch = useDispatch();
     const items = useSelector<RootState>(({cart}) => cart.items);
    
     const addToCart=()=>{
-        const product={id,name,price}
+        const product={id,name,price,image}
         onClickAdd(product);
         showArray=[...showArray,id];
     }
@@ -31,6 +31,7 @@ function Product({onClickAdd,id,name,price}:ProductProps) {
 
     return (
         <div className="home__inner-item">
+            <img className="home__inner-img" src={image}/>
             <div className="home__item-name">{name}</div>
             <div className="home__item-price">{price}₽</div>
             {!showArray.includes(id) && <div onClick={addToCart} className="home__item-add" >Add to cart</div>}

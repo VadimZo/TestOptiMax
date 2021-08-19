@@ -21,11 +21,15 @@ function Cart() {
             <div className="cart__inner">
                 {
                     cartItems.map((item,i)=>(
+                        console.log(item),
                         item==undefined ? null :
                        <div key={`${i}_${item?.name}`} className="cart__inner-item">
                         <div className="cart__item-left">
-                             <div className="cart__item-name">{item.name}</div>
-                        <div className="cart__item-price">{item.price}₽</div>
+                             <img className="cart__inner-img" src={item.image}/>
+                             <div className="cart__inner-box">
+                                   <div className="cart__item-name">{item.name}</div>
+                             <div className="cart__item-price">{item.price}₽</div>
+                             </div>
                         </div>
                         <div className="cart__item-quantity">
                             <div onClick={()=>dispatch(plusCartItem(item.id))}>+</div><span>{items[item.id].items.length}</span><div onClick={()=>dispatch(minusCartItem(item.id))}>-</div>
