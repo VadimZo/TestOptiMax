@@ -1,9 +1,9 @@
-import React from 'react';
-import './scss/App.scss';
-import Home from './pages/Home';
-import Cart from './pages/Cart';
-import Header from './components/Header';
-import { Route,Switch } from 'react-router-dom';
+import React from "react";
+import "./scss/App.scss";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import Header from "./components/Header";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
